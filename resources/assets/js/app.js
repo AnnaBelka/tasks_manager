@@ -6,7 +6,7 @@
  */
 
 require('./bootstrap');
-
+require('bootstrap-datepicker');
 window.Vue = require('vue');
 
 /**
@@ -19,4 +19,7 @@ Vue.component('example-component', require('./components/ExampleComponent.vue'))
 
 const app = new Vue({
     el: '#app'
+});
+$('.datepicker').datepicker({
+    format: 'yyyy-mm-dd'
 });
